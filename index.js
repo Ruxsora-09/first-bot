@@ -36,33 +36,33 @@ bot.on("message", (msg) => {
   if (text == "/start" || text == "Asosiy menyuga qaytish") {
     onStart(chatId, firstName);
   } 
-//   else if (text == "📚 Kurslar") {
-//     // onCourses(chatId);
-//   } else if (text == "ℹ️ Markaz haqida") {
-//     bot.sendMessage(chatId, "📍 Bizning o‘quv markaz joylashuvi:");
-//     bot.sendLocation(chatId, 41.3781989, 60.3694056);
-//   } else if (text == "✍️ Ro‘yxatdan o‘tish") {
-//     onRegister(chatId);
-//   } else if (text == "/users") {
-//     onUsers(chatId);
-//   } else {
-//     bot.sendMessage(
-//       chatId,
-//       `
-//     ⚠️ Kechirasiz, men sizning xabaringizni tushunmadim.
+  else if (text == "📚 Kurslar") {
+    // onCourses(chatId);
+  } else if (text == "ℹ️ Markaz haqida") {
+    bot.sendMessage(chatId, "📍 Bizning o‘quv markaz joylashuvi:");
+    bot.sendLocation(chatId, 41.3781989, 60.3694056);
+  } else if (text == "✍️ Ro‘yxatdan o‘tish") {
+    onRegister(chatId);
+  } else if (text == "/users") {
+    onUsers(chatId);
+  } else {
+    bot.sendMessage(
+      chatId,
+      `
+    ⚠️ Kechirasiz, men sizning xabaringizni tushunmadim.
 
-// Iltimos, quyidagi tugmani bosing 👇
-// /start
+Iltimos, quyidagi tugmani bosing 👇
+/start
 
-//     `,
-//       {
-//         reply_markup: {
-//           keyboard: [[{ text: `Asosiy menyuga qaytish` }]],
-//           resize_keyboard: true,
-//         },
-//       }
-//     );
-//   }
+    `,
+      {
+        reply_markup: {
+          keyboard: [[{ text: `Asosiy menyuga qaytish` }]],
+          resize_keyboard: true,
+        },
+      }
+    );
+  }
 });
 
 console.log("Bot ishga tushdi...");
